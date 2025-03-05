@@ -2,6 +2,8 @@ import { Tabs } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
+import i18n from "@/src/utilities/i18n";
+
 export default function TabLayout() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -21,7 +23,7 @@ export default function TabLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: "Home",
+            title: i18n.t("home"),
             tabBarIcon: ({ color, focused }) => (
               <Ionicons
                 name={focused ? "home-sharp" : "home-outline"}
@@ -32,9 +34,9 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name="about"
+          name="settings"
           options={{
-            title: "About",
+            title: i18n.t("settings"),
             tabBarIcon: ({ color, focused }) => (
               <Ionicons
                 name={focused ? "settings-outline" : "settings-sharp"}
