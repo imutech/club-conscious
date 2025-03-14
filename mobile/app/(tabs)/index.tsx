@@ -5,13 +5,12 @@ import {
   ImageBackground,
   SafeAreaView,
 } from "react-native";
-import { Link } from "expo-router";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import { theme } from "@/src/theme/theme";
 
 export default function Index() {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
         #TODO: Add Toast for API connection failed
       </ImageBackground>
@@ -20,7 +19,8 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  background: theme.appBackgroundImage as any,
+  background: theme.appBackgroundImage as Object,
+  safeArea: theme.safeArea as Object,
   container: {
     flex: 1,
     backgroundColor: "#25292e",
