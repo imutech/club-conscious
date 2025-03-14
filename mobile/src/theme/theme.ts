@@ -5,6 +5,12 @@ function remToPixels(rem: string): number {
 }
 
 export const theme = {
+  container: {
+    flex: 1,
+    backgroundColor: "#25292e",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   colors: {
     primary: "#3498db",
     secondary: "#2ecc71",

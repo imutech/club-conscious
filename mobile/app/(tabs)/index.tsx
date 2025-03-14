@@ -1,10 +1,4 @@
-import {
-  Text,
-  View,
-  StyleSheet,
-  ImageBackground,
-  SafeAreaView,
-} from "react-native";
+import { Text, StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import { theme } from "@/src/theme/theme";
 
@@ -27,10 +21,4 @@ const styles = StyleSheet.create({
     ...theme.typography.sizing.lg,
     alignSelf: "center",
   } as Object,
-  container: {
-    flex: 1,
-    backgroundColor: "#25292e",
-    alignItems: "center",
-    justifyContent: "center",
-  },
 });

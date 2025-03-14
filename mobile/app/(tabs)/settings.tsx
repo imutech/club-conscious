@@ -1,21 +1,24 @@
-import { Text, View, StyleSheet } from "react-native";
+import { theme } from "@/src/theme/theme";
+import { StyleSheet, ImageBackground, SafeAreaView } from "react-native";
+import backgroundImageConfig from "@/src/utilities/backgroundImg";
 
 export default function SettingsScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Settings screen</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <ImageBackground
+        source={backgroundImageConfig}
+        style={styles.background}
+      ></ImageBackground>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#25292e",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    color: "#fff",
-  },
+  background: theme.appBackgroundImage as Object,
+  safeArea: theme.safeArea as Object,
+  baseText: {
+    ...theme.typography.baseText,
+    ...theme.typography.sizing.lg,
+    alignSelf: "center",
+  } as Object,
 });
