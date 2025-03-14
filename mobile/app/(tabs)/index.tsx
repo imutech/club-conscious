@@ -13,6 +13,7 @@ export default function Index() {
     <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
         #TODO: Add Toast for API connection failed
+        <Text style={styles.baseText}> Hello world</Text>
       </ImageBackground>
     </SafeAreaView>
   );
@@ -21,6 +22,11 @@ export default function Index() {
 const styles = StyleSheet.create({
   background: theme.appBackgroundImage as Object,
   safeArea: theme.safeArea as Object,
+  baseText: {
+    ...theme.typography.baseText,
+    ...theme.typography.sizing.lg,
+    alignSelf: "center",
+  } as Object,
   container: {
     flex: 1,
     backgroundColor: "#25292e",

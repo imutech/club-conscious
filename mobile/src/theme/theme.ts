@@ -1,3 +1,9 @@
+const BASE_SIZE = 16; // Base size for 1rem
+
+function remToPixels(rem: string): number {
+  return parseFloat(rem) * BASE_SIZE;
+}
+
 export const theme = {
   colors: {
     primary: "#3498db",
@@ -5,20 +11,28 @@ export const theme = {
     // ...add more colors...
   },
   typography: {
-    fontFamily: "'Open Sans', sans-serif",
-    fontSizes: {
-      small: "0.875rem",
-      medium: "1rem",
-      large: "1.25rem",
-      // ...add more sizes...
+    baseText: {
+      fontSize: remToPixels("1rem"),
+      color: "#fff",
+    },
+    sizing: {
+      sm: {
+        fontSize: remToPixels("0.8rem"),
+      },
+      md: {
+        fontSize: remToPixels("1rem"),
+      },
+      lg: {
+        fontSize: remToPixels("1.2rem"),
+      },
     },
     // ...add more typography settings...
   },
   spacing: {
-    xs: "4px",
-    sm: "8px",
-    md: "16px",
-    lg: "24px",
+    xs: 4,
+    sm: 8,
+    md: 16,
+    lg: 24,
     // ...add more spacing...
   },
   appBackgroundImage: {
