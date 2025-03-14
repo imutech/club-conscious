@@ -21,4 +21,9 @@ export const theme = {
     lg: "24px",
     // ...add more spacing...
   },
+  appBackgroundImage: {
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+  },
 };
