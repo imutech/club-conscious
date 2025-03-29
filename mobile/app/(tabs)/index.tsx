@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
-        #TODO: Add Toast for API connection failed
+        #TODO: Add Toast for API connection failedfailed
         <Text style={styles.baseText}> Hello world!</Text>
       </ImageBackground>
     </SafeAreaView>
