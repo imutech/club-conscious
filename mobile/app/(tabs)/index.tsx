@@ -1,13 +1,13 @@
 import { Text, StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import { theme } from "@/src/theme/theme";
+import i18n from "@/src/utilities/i18n";
 
 export default function Index() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
-        #TODO: Add Toast for API connection failedfailed
-        <Text style={styles.baseText}> Hello world!</Text>
+        <Text style={styles.baseText}>{i18n.t("hello")}</Text>
       </ImageBackground>
     </SafeAreaView>
   );
