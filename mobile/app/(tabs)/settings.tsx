@@ -1,5 +1,11 @@
 import { theme } from "@/src/theme/theme";
-import { View, StyleSheet, ImageBackground, SafeAreaView } from "react-native";
+import {
+  View,
+  StyleSheet,
+  ImageBackground,
+  SafeAreaView,
+  Text,
+} from "react-native";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import PrimaryButton from "@/src/components/PrimaryButton";
 import i18n from "@/src/utilities/i18n";
@@ -9,6 +15,9 @@ export default function SettingsScreen() {
     <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
         <View style={styles.container}>
+          <View>
+            <Text>{"Lang:"}</Text>
+          </View>
           <PrimaryButton
             bgColor={theme.colors.primary}
             pinnedBottom
