@@ -3,5 +3,7 @@
   "settings": "Settings",
   "hello": "Hello",
   "save": "Save",
-  "language": "Language"
+  "language": "Language",
+  "english": "English",
+  "french": "French"
 }

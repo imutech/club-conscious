@@ -3,5 +3,7 @@
   "settings": "Paramètres",
   "hello": "Bonjour",
   "save": "Enregistrer",
-  "language": "Langue"
+  "language": "Langue",
+  "english": "Anglais",
+  "french": "Français"
 }

@@ -10,8 +10,11 @@ import {
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import PrimaryButton from "@/src/components/PrimaryButton";
 import i18n from "@/src/utilities/i18n";
+import React, { useState } from "react";
 
 export default function SettingsScreen() {
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
