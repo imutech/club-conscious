@@ -5,6 +5,7 @@ import {
   ImageBackground,
   SafeAreaView,
   Text,
+  ViewStyle,
 } from "react-native";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import PrimaryButton from "@/src/components/PrimaryButton";
@@ -15,8 +16,8 @@ export default function SettingsScreen() {
     <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
         <View style={styles.container}>
-          <View>
-            <Text>{"Lang:"}</Text>
+          <View style={theme.row as ViewStyle}>
+            <Text style={styles.baseText}>{i18n.t("language")}</Text>
           </View>
           <PrimaryButton
             bgColor={theme.colors.primary}
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   safeArea: theme.safeArea as Object,
   baseText: {
     ...theme.typography.baseText,
-    ...theme.typography.sizing.lg,
+    ...theme.typography.headings.h2,
     alignSelf: "center",
   } as Object,
 });

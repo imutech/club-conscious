@@ -7,8 +7,16 @@ function remToPixels(rem: string): number {
 export const theme = {
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
+    marginTop: remToPixels("2rem"),
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    paddingHorizontal: remToPixels("1rem"), // Optional: Add padding if needed
+    marginVertical: remToPixels("0.5rem"), // Optional: Add spacing between rows
   },
   colors: {
     primary: "#CB2790",
@@ -29,6 +37,23 @@ export const theme = {
       },
       lg: {
         fontSize: remToPixels("1.2rem"),
+      },
+    },
+    headings: {
+      h1: {
+        fontSize: remToPixels("2rem"),
+        fontWeight: "bold",
+        color: "#fff", // Default color for headings
+      },
+      h2: {
+        fontSize: remToPixels("1.75rem"),
+        fontWeight: "bold",
+        color: "#fff",
+      },
+      h3: {
+        fontSize: remToPixels("1.5rem"),
+        fontWeight: "bold",
+        color: "#fff",
       },
     },
     // ...add more typography settings...
