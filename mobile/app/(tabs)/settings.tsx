@@ -10,10 +10,15 @@ import {
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import PrimaryButton from "@/src/components/PrimaryButton";
 import i18n from "@/src/utilities/i18n";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { Picker } from "@react-native-picker/picker";
 
 export default function SettingsScreen() {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [languages, setLanguages] = useState([
+    { label: i18n.t("english"), value: "en" },
+    { label: i18n.t("french"), value: "fr" },
+  ]);
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -21,6 +26,21 @@ export default function SettingsScreen() {
         <View style={styles.container}>
           <View style={theme.row as ViewStyle}>
             <Text style={styles.baseText}>{i18n.t("language")}</Text>
+            <Picker
+              style={theme.picker}
+              selectedValue={selectedLanguage}
+              onValueChange={(itemValue, itemIndex) =>
+                setSelectedLanguage(itemValue)
+              }
+            >
+              {languages.map((language) => (
+                <Picker.Item
+                  key={language.value}
+                  label={language.label}
+                  value={language.value}
+                />
+              ))}
+            </Picker>
           </View>
           <PrimaryButton
             bgColor={theme.colors.primary}

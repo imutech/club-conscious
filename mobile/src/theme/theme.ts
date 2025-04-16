@@ -72,4 +72,9 @@ export const theme = {
   safeArea: {
     flex: 1,
   },
+  picker: {
+    height: 60,
+    width: 200,
+    backgroundColor: "#fff",
+  },
 };
