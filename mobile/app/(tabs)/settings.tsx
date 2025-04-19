@@ -10,11 +10,17 @@ import {
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import PrimaryButton from "@/src/components/PrimaryButton";
 import i18n from "@/src/utilities/i18n";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Picker } from "@react-native-picker/picker";
+import { useI18nStore } from "@/src/store/i18nStore";
 
 export default function SettingsScreen() {
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  // Get locale and setter from the Zustand store
+  const currentLocale = useI18nStore((state) => state.locale);
+  const setLocale = useI18nStore((state) => state.setLocale);
+
+  // Local state for the picker selection, initialized from the store
+  const [selectedLanguage, setSelectedLanguage] = useState(currentLocale);
   const [languages, setLanguages] = useState([
     { label: i18n.t("english"), value: "en" },
     { label: i18n.t("french"), value: "fr" },
@@ -29,9 +35,10 @@ export default function SettingsScreen() {
             <Picker
               style={theme.picker}
               selectedValue={selectedLanguage}
-              onValueChange={(itemValue, itemIndex) =>
-                setSelectedLanguage(itemValue)
-              }
+              onValueChange={(itemValue) => {
+                setSelectedLanguage(itemValue); // Update local picker state
+                setLocale(String(itemValue)); // Update global locale via Zustand
+              }}
             >
               {languages.map((language) => (
                 <Picker.Item
@@ -42,16 +49,6 @@ export default function SettingsScreen() {
               ))}
             </Picker>
           </View>
-          <PrimaryButton
-            bgColor={theme.colors.primary}
-            pinnedBottom
-            onPress={() => {
-              // Handle button press here
-              console.log("Settings button pressed!");
-            }}
-            label={`${i18n.t("save")}`}
-            style={{ marginTop: 20 }}
-          />
         </View>
       </ImageBackground>
     </SafeAreaView>
