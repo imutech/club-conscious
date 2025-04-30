@@ -72,6 +72,7 @@ export const theme = {
       padding: 10,
       borderColor: "white",
       backgroundColor: "white",
+      width: "100%", // Make input span full width
     },
     labelInput: {
       color: "white",
@@ -83,6 +84,12 @@ export const theme = {
       fontSize: 20,
       fontWeight: "bold",
       textAlign: "center",
+    },
+    field: {
+      flexDirection: "column",
+      gap: 10,
+      width: "100%",
+      padding: 20,
     },
   },
   appBackgroundImage: {

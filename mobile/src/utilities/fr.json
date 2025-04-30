@@ -7,5 +7,7 @@
   "english": "Anglais",
   "french": "Français",
   "login": "Connexion",
-  "login_in": "Connexion dans"
+  "login_in": "Connexion dans",
+  "username": "Nom d'utilisateur",
+  "password": "Mot de passe"
 }

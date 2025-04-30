@@ -7,5 +7,7 @@
   "english": "English",
   "french": "French",
   "login": "Login",
-  "login_in": "Login in"
+  "login_in": "Login in",
+  "username": "Username",
+  "password": "Password"
 }
