@@ -1,20 +1,48 @@
-import { Text, StyleSheet, ImageBackground, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  ImageBackground,
+  SafeAreaView,
+  View,
+} from "react-native";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import { theme } from "@/src/theme/theme";
 import i18n from "@/src/utilities/i18n";
+import React from "react";
+import PrimaryButton from "@/src/components/PrimaryButton";
+import { router } from "expo-router";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { useI18nStore } from "@/src/store/i18nStore";
 
 export default function Index() {
+  useI18nStore();
   return (
     <SafeAreaView style={styles.safeArea}>
       <ImageBackground source={backgroundImageConfig} style={styles.background}>
-        <Text style={styles.baseText}>{i18n.t("hello")}</Text>
+        <View style={styles.container}>
+          <PrimaryButton
+            bgColor={"#CB2790"}
+            label={i18n.t("login")}
+            onPress={() => {
+              router.push("/login");
+            }}
+            style={{ alignSelf: "flex-start", marginLeft: 20 }}
+          >
+            <Ionicons
+              name="diamond-outline"
+              size={20}
+              color="black"
+              style={{ paddingRight: 10 }}
+            />
+          </PrimaryButton>
+        </View>
       </ImageBackground>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  background: theme.appBackgroundImage as Object,
+  container: theme.container as Object,
+  background: { ...theme.appBackgroundImage, alignItems: "end" } as Object,
   safeArea: theme.safeArea as Object,
   baseText: {
     ...theme.typography.baseText,

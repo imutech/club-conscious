@@ -5,5 +5,7 @@
   "save": "Save",
   "language": "Language",
   "english": "English",
-  "french": "French"
+  "french": "French",
+  "login": "Login",
+  "login_in": "Login in"
 }

@@ -5,5 +5,7 @@
   "save": "Enregistrer",
   "language": "Langue",
   "english": "Anglais",
-  "french": "Français"
+  "french": "Français",
+  "login": "Connexion",
+  "login_in": "Connexion dans"
 }

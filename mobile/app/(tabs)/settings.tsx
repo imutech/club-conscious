@@ -8,7 +8,6 @@ import {
   ViewStyle,
 } from "react-native";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
-import PrimaryButton from "@/src/components/PrimaryButton";
 import i18n from "@/src/utilities/i18n";
 import React, { useState } from "react";
 import { Picker } from "@react-native-picker/picker";

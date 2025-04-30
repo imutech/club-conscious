@@ -65,6 +65,26 @@ export const theme = {
     lg: 24,
     // ...add more spacing...
   },
+  form: {
+    input: {
+      height: 50,
+      borderWidth: 1,
+      padding: 10,
+      borderColor: "white",
+      backgroundColor: "white",
+    },
+    labelInput: {
+      color: "white",
+      fontSize: 20,
+    },
+    errorText: {
+      marginVertical: 5,
+      color: "red",
+      fontSize: 20,
+      fontWeight: "bold",
+      textAlign: "center",
+    },
+  },
   appBackgroundImage: {
     flex: 1,
     justifyContent: "center",

@@ -6,7 +6,6 @@ import i18n from "@/src/utilities/i18n";
 
 export default function TabLayout() {
   useI18nStore();
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Tabs
