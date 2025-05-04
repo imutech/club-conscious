@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useI18nStore } from '@/src/store/i18nStore'; 
+import { useI18nStore } from "@/src/store/i18nStore";
 import i18n from "@/src/utilities/i18n";
 
 export default function TabLayout() {

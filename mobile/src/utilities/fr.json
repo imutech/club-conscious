@@ -9,5 +9,6 @@
   "login": "Connexion",
   "login_in": "Connexion dans",
   "username": "Nom d'utilisateur",
-  "password": "Mot de passe"
+  "password": "Mot de passe",
+  "register": "S'inscrire"
 }

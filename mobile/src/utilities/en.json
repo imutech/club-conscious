@@ -9,5 +9,6 @@
   "login": "Login",
   "login_in": "Login in",
   "username": "Username",
-  "password": "Password"
+  "password": "Password",
+  "register": "Register"
 }
