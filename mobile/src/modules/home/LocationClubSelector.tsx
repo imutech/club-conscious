@@ -35,7 +35,22 @@ const citiesData: ICity[] = [
     value: "Ottawa",
     location: "Ottawa, Canada",
     expanded: false,
-    clubs: [],
+    clubs: [
+      {
+        name: "Club 1",
+        value: "club1",
+        venueId: 1,
+        capacity: 500,
+        coverImage: "https://example.com/club1.jpg",
+      },
+      {
+        name: "Club 2",
+        value: "club2",
+        venueId: 2,
+        capacity: 300,
+        coverImage: "https://example.com/club2.jpg",
+      },
+    ],
   },
 ];
 
