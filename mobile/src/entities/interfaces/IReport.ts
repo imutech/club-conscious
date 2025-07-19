@@ -5,10 +5,10 @@ export interface IReport {
   otherCount?: number;
   atmosphere?: string;
   comments?: string;
-  tags?: Array<{
+  tags?: {
     name: string;
     id: number;
-  }>;
+  }[];
   venueId: string;
   userId: string;
   reportId: string;
