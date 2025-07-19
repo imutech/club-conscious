@@ -1,9 +1,4 @@
-import {
-  StyleSheet,
-  ImageBackground,
-  SafeAreaView,
-  View,
-} from "react-native";
+import { StyleSheet, ImageBackground, SafeAreaView, View } from "react-native";
 import backgroundImageConfig from "@/src/utilities/backgroundImg";
 import { theme } from "@/src/theme/theme";
 import i18n from "@/src/utilities/i18n";
@@ -12,6 +7,7 @@ import PrimaryButton from "@/src/components/PrimaryButton";
 import { router } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useI18nStore } from "@/src/store/i18nStore";
+import LocationClubSelector from "@/src/modules/home/LocationClubSelector";
 
 export default function Index() {
   useI18nStore();
@@ -34,6 +30,7 @@ export default function Index() {
               style={{ paddingRight: 10 }}
             />
           </PrimaryButton>
+          <LocationClubSelector />
         </View>
       </ImageBackground>
     </SafeAreaView>
